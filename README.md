@@ -3,6 +3,14 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8fdb71d31f768b70a8fd/maintainability)](https://codeclimate.com/github/SmwOverRainbow/frontend-project-44/maintainability)
 
+«Игры разума» — набор из пяти консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
+
+brain-even : Определение четного числа.
+brain-calc: Калькулятор. Арифметические выражения, которые необходимо вычислить.
+brain-progression: Прогрессия. Поиск пропущенных чисел в последовательности чисел.
+brain-gcd: Определение наибольшего общего делителя.
+brain-prime: Определение простого числа.
+
 https://asciinema.org/a/cwIgsHhfxTlPR5Sknaj8Whlut  - brain-even
 
 https://asciinema.org/a/oKRIvaNUZ6ct80QJl9xN7v5Vo  - brain-calc
