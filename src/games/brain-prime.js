@@ -6,7 +6,7 @@ const task = () => {
 };
 
 const randomQuest = () => {
-  const randomNumber = _.random(1, 2);
+  const randomNumber = _.random(1, 24);
   return randomNumber;
 };
 
