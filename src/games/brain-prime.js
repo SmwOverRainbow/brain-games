@@ -1,16 +1,14 @@
 import _ from 'lodash';
 import startGame from '../index.js';
 
-const task = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-};
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const randomQuest = () => {
+const getRandomQuest = () => {
   const randomNumber = _.random(1, 24);
   return randomNumber;
 };
 
-const correctAnswer = (number) => {
+const getCorrectAnswer = (number) => {
   let countDividers = 0;
   let divider = number;
   if (number === 1) {
@@ -29,8 +27,8 @@ const correctAnswer = (number) => {
   return 'yes';
 };
 
-const brainPrime = () => {
-  startGame(task, randomQuest, correctAnswer);
+const startBrainPrime = () => {
+  startGame(task, getRandomQuest, getCorrectAnswer);
 };
 
-export default brainPrime;
+export default startBrainPrime;

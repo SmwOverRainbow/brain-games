@@ -1,9 +1,7 @@
 import _ from 'lodash';
 import startGame from '../index.js';
 
-const task = () => {
-  console.log('What number is missing in the progression?');
-};
+const task = 'What number is missing in the progression?';
 
 const getProgression = () => {
   const stepProgr = _.random(1, 5);
@@ -18,7 +16,7 @@ const getProgression = () => {
   return progression;
 };
 
-const randomQuest = () => {
+const getRandomQuest = () => {
   const positionOfMissingNum = _.random(0, 9);
   const string = getProgression();
   const numbers = string.split(' ');
@@ -26,7 +24,7 @@ const randomQuest = () => {
   return numbers.join(' ');
 };
 
-const correctAnswer = (string) => {
+const getCorrectAnswer = (string) => {
   const members = string.trim().split(' ');
   const indexOfMissingNum = members.indexOf('..');
   let missingNum = 0;
@@ -41,8 +39,8 @@ const correctAnswer = (string) => {
   return missingNum;
 };
 
-const brainProgression = () => {
-  startGame(task, randomQuest, correctAnswer);
+const startBrainProgression = () => {
+  startGame(task, getRandomQuest, getCorrectAnswer);
 };
 
-export default brainProgression;
+export default startBrainProgression;
