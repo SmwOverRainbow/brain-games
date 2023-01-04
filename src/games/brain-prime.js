@@ -6,13 +6,16 @@ const task = () => {
 };
 
 const randomQuest = () => {
-  const randomNumber = _.random(1, 23);
+  const randomNumber = _.random(1, 2);
   return randomNumber;
 };
 
 const correctAnswer = (number) => {
   let countDividers = 0;
   let divider = number;
+  if (number === 1) {
+    return 'no';
+  }
   for (let i = number; i > 0; i -= 1) {
     if (number % divider === 0) {
       countDividers += 1;
