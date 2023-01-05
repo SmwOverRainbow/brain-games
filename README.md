@@ -5,8 +5,9 @@
 
 ### Requirements ###
 
-**Node JS** - version 19.3.0
-**npm** - version 9.2.0
+**Node JS** - version 13.0.0 and higher
+
+**npm** - version 6.12.0 and higher
 
 ### Install ###
 
