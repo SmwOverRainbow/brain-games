@@ -3,6 +3,8 @@ import startGame from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
+const getItemFromArray = (array, index) => array[index];
+
 const getRoundData = () => {
   const stepProgr = _.random(1, 5);
   const lengthProgr = 10;
@@ -17,7 +19,9 @@ const getRoundData = () => {
 
   const positionOfMissingNum = _.random(0, 9);
   const numbers = progression.split(' ');
-  const correctAnswer = numbers[positionOfMissingNum];
+
+  const correctAnswer = getItemFromArray(numbers, positionOfMissingNum);
+
   numbers[positionOfMissingNum] = '..';
   const randomQuest = numbers.join(' ');
 
