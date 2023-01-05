@@ -12,7 +12,7 @@ const calc = (sign, num1, num2) => {
     case '*':
       return num1 * num2;
     default:
-      return console.error('operator not found');
+      throw new Error('Operator not found...');
   }
 };
 
