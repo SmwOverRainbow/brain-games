@@ -8,17 +8,13 @@ const getRoundData = () => {
   const randomNumber2 = _.random(1, 20);
   const randomQuest = `${randomNumber1} ${randomNumber2}`;
 
-  const smallestNum = Math.min(randomNumber1, randomNumber2);
-  let nod = smallestNum;
-  let correctAnswer = 0;
-
-  for (let i = smallestNum; i > 0; i -= 1) {
-    if ((randomNumber1 % nod === 0) && (randomNumber2 % nod === 0)) {
-      correctAnswer = nod;
-      break;
+  const gcd = (a, b) => {
+    if (!b) {
+      return a;
     }
-    nod -= 1;
-  }
+    return gcd(b, a % b);
+  };
+  const correctAnswer = gcd(randomNumber1, randomNumber2);
 
   return [randomQuest, correctAnswer];
 };

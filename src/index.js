@@ -5,12 +5,10 @@ const startGame = (task, getRoundData) => {
   const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
   console.log(task);
-  const roundCount = 3;
+  const roundsCount = 3;
 
-  for (let i = 0; i < roundCount; i += 1) {
-    const roundData = getRoundData();
-    const question = roundData[0];
-    const expectedAnswer = roundData[1];
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, expectedAnswer] = getRoundData();
 
     console.log(`Question: ${question}`);
     const gamerAnswer = readlineSync.question('Your answer: ');
