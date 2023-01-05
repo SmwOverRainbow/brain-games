@@ -3,16 +3,16 @@ import startGame from '../index.js';
 
 const task = 'What is the result of the expression?';
 
-const calc = (sign, num1, nun2) => {
+const calc = (sign, num1, num2) => {
   switch (sign) {
     case '+':
-      return num1 + nun2;
+      return num1 + num2;
     case '-':
-      return num1 - nun2;
+      return num1 - num2;
     case '*':
-      return num1 * nun2;
+      return num1 * num2;
     default:
-      return undefined;
+      return console.error('operator not found');
   }
 };
 
